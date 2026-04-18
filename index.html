@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqib Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calc-card">
+    <p class="brand">Designed By Aqib</p>
+
+    <div class="top-row">
+        <div class="solar-panel">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+
+        <div class="controls">
+            <button onclick="toggleLight()">💡</button>
+            <button onclick="toggleMode()" id="modeBtn">Sci</button>
+        </div>
+    </div>
+
+    <div class="header">
+        <h2>Calculator</h2>
+        <span>⋮</span>
+    </div>
+
+    <input type="text" id="display" readonly placeholder="0">
+
+    <div class="btn-container" id="btnGrid">
+
+        <!-- Top Buttons -->
+        <button class="btn orange" onclick="clearDisplay()">C</button>
+        <button class="btn orange" onclick="toggleSign()">+/-</button>
+        <button class="btn orange" onclick="deleteLast()">Del</button>
+        <button class="btn orange" onclick="calculateFunction('sqrt')">√</button>
+        <button class="btn orange" onclick="calculateFunction('cbrt')">∛</button>
+
+        <!-- Scientific -->
+        <div class="sci-row">
+            <button class="btn black" onclick="appendValue('**2')">x²</button>
+            <button class="btn black" onclick="appendValue('**3')">x³</button>
+            <button class="btn black" onclick="appendValue('**')">xʸ</button>
+            <button class="btn black" onclick="calculateFunction('sin')">sin</button>
+            <button class="btn black" onclick="calculateFunction('cos')">cos</button>
+
+            <button class="btn black" onclick="calculateFunction('tan')">tan</button>
+            <button class="btn black" onclick="calculateFunction('log')">log</button>
+            <button class="btn black" onclick="calculateFunction('ln')">ln</button>
+            <button class="btn black" onclick="appendValue('3.14159')">π</button>
+            <button class="btn black" onclick="appendValue('2.718')">e</button>
+
+            <button class="btn black" onclick="calculateFunction('inv')">1/x</button>
+            <button class="btn black" onclick="calculateFunction('fact')">n!</button>
+            <button class="btn black" onclick="appendValue('(')">(</button>
+            <button class="btn black" onclick="appendValue(')')">)</button>
+            <button class="btn black" onclick="appendValue('%')">%</button>
+        </div>
+
+        <!-- Numbers -->
+        <button class="btn grey" onclick="appendValue('7')">7</button>
+        <button class="btn grey" onclick="appendValue('8')">8</button>
+        <button class="btn grey" onclick="appendValue('9')">9</button>
+        <button class="btn black" onclick="appendValue('+')">+</button>
+        <button class="btn black" onclick="appendValue('-')">-</button>
+
+        <button class="btn grey" onclick="appendValue('4')">4</button>
+        <button class="btn grey" onclick="appendValue('5')">5</button>
+        <button class="btn grey" onclick="appendValue('6')">6</button>
+        <button class="btn black" onclick="appendValue('*')">*</button>
+        <button class="btn black" onclick="appendValue('/')">/</button>
+
+        <button class="btn grey" onclick="appendValue('1')">1</button>
+        <button class="btn grey" onclick="appendValue('2')">2</button>
+        <button class="btn grey" onclick="appendValue('3')">3</button>
+        <button class="btn black" onclick="calculateResult()">=</button>
+        <button class="btn black" onclick="appendValue('.')">.</button>
+
+        <button class="btn grey zero-wide" onclick="appendValue('0')">0</button>
+        <button class="btn grey" onclick="appendValue('00')">00</button>
+        <button class="btn grey" onclick="appendValue('000')">000</button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

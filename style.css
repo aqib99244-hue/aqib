@@ -1,0 +1,167 @@
+body {
+    background-color: #5a6268;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #e4e6eb;
+}
+
+.calc-card {
+    background-color: #434953;
+    padding: 20px;
+    border-radius: 30px;
+    width: 340px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transition: all 0.7s ease;
+}
+
+/* Light Mode Card */
+body.light-mode .calc-card {
+    background-color: #ffffff;
+}
+
+.brand { 
+    color: #aaa; 
+    font-size: 15px; 
+    margin-bottom: 10px; 
+}
+
+/* Solar & Control Styling */
+.top-row { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 15px; 
+}
+
+.solar-panel { 
+    background: #3d2b1f; 
+    display: flex; 
+    padding: 4px; 
+    gap: 4px; 
+    border-radius: 4px; 
+}
+
+.cell { 
+    width: 18px; 
+    height: 28px; 
+    background: #523a28; 
+    border: 1px solid #333; 
+}
+
+.controls button {
+    background: #333; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 12px;
+}
+
+/* Header */
+.header { 
+    display: flex; 
+    justify-content: space-between; 
+    color: white; 
+    margin-bottom: 10px; 
+}
+
+body.light-mode .header {
+    color: black;
+}
+
+/* Display */
+#display {
+    width: 100%; 
+    height: 85px; 
+    background-color: #8ce6ad;
+    border: none; 
+    border-radius: 15px; 
+    margin-bottom: 20px;
+    font-size: 32px; 
+    text-align: right; 
+    padding: 15px;
+    box-sizing: border-box; 
+    color: #222; 
+    transition: 0.3s;
+}
+
+/* Light Off Effect */
+.light-off { 
+    background-color: #3d634b !important; 
+    color: #111 !important; 
+}
+
+/* Buttons Grid */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+/* ❌ OLD: display: contents (problematic)
+   ✅ FIX: use grid */
+.sci-row {
+    display: grid;
+    grid-column: span 5;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+/* Hide Sci buttons */
+.simple-mode .sci-row { 
+    display: none; 
+}
+
+/* Buttons */
+.btn {
+    border: none; 
+    padding: 15px 5px; 
+    border-radius: 10px;
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.1s;
+}
+
+.btn:active { 
+    transform: scale(0.92); 
+}
+
+.orange { 
+    background: #ff9f0a; 
+    color: black; 
+}
+
+.black { 
+    background: #1c1c1e; 
+    color: white; 
+    font-size: 13px; 
+}
+
+.grey { 
+    background: #3a3a3c; 
+    color: white; 
+    font-size: 18px; 
+}
+
+/* Light Mode Buttons */
+body.light-mode .black {
+    background: #ddd;
+    color: black;
+}
+
+body.light-mode .grey {
+    background: #bbb;
+    color: black;
+}
+
+/* Zero button */
+.zero-wide { 
+    grid-column: span 2; 
+}
